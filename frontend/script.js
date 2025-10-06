@@ -12,7 +12,7 @@ async function removeBackground() {
   formData.append("file", input.files[0]);
 
   // 👇 Replace with your actual Codespace backend URL
-  const backendURL = "https://shiny-dollop-x6pvxqr6jqwcvvxq-8000.app.github.dev/background-remover-python/";
+  const backendURL = "https://background-remover-python.onrender.com/";
 
   try {
     const response = await fetch(backendURL, {
