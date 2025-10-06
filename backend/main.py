@@ -6,17 +6,19 @@ import io
 
 app = FastAPI()
 
-# Allow frontend requests (CORS)
+# 👇 Update with your actual Codespaces frontend origin
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Set to your frontend domain in production
+    allow_origins=[
+        "*",  # Replace this with your actual frontend Codespace domain
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-@app.post("/remove-background/")
+@app.post("/background-remover-python/")
 async def remove_background(file: UploadFile = File(...)):
-    image_data = await file.read()
-    output_data = remove(image_data)
+    input_data = await file.read()
+    output_data = remove(input_data)
     return StreamingResponse(io.BytesIO(output_data), media_type="image/png")

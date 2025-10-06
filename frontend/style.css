@@ -4,14 +4,39 @@ body {
   padding: 2em;
   background: #f4f4f4;
 }
-input, button {
+
+input,
+button {
   margin: 1em;
   padding: 0.5em;
 }
+
 img {
   max-width: 90%;
   margin-top: 1em;
   border: 1px solid #ccc;
   background: #fff;
   padding: 10px;
+}
+
+
+.download-button {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  background: repeating-conic-gradient(#ccc 0% 25%, #eee 0% 50%) 0% / 20px 20px;
+  padding: 20px;
+  display: inline-block;
 }
